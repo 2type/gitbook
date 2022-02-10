@@ -109,6 +109,8 @@ remote_theme: 你的用户名或组织名/gitbook
 
 ## 部署jekyll  <a id="publish_jeykyll"></a>
 
+### Gemfile
+
 根目录新建 `Gemfile` 文件
 
 ```gemfile
@@ -137,7 +139,7 @@ permalink: /practice/friends/
 在 `https://vercel.com/用户名/项目/settings/environment-variables` 页面中
 
 添加 
-NAME: `VERCEL_GIT_REPO_OWNER`
+NAME: `PAGES_REPO_NWO`
 VALUE: `用户名/项目` 例如 `nimoc/be`
 
 ## 本地开发
