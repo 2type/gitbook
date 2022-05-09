@@ -144,6 +144,12 @@ VALUE: `用户名/项目` 例如 `nimoc/be`
 
 ## 本地开发
 
+根目录新建 `Gemfile` 文件
+
+```gemfile
+source "https://rubygems.org"
+gem 'github-pages', group: :jekyll_plugins
+
 https://jekyllrb.com/docs/
 
 ```
