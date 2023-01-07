@@ -111,8 +111,9 @@
             }
         })
     })
+    // 切换显示导航
     document
-        .getElementById("nav-switch")
+        .getElementById("nav-switch-show")
         .addEventListener("click", function () {
             switchNav()
     })
@@ -121,6 +122,19 @@
             document.getElementById("nav").classList.remove("nav-switch-status--show")
         } else {
             document.getElementById("nav").classList.add("nav-switch-status--show")
+        }
+    }
+    // 切换导航类型
+    document
+        .getElementById("nav-switch-type")
+        .addEventListener("click", function () {
+            switchNavType()
+        })
+    function switchNavType() {
+        if (document.getElementById("nav").classList.contains("nav-switch-status--page")) {
+            document.getElementById("nav").classList.remove("nav-switch-status--page")
+        } else {
+            document.getElementById("nav").classList.add("nav-switch-status--page")
         }
     }
     // 延迟平滑,避免刚打开页面带hash时候出现滚动
@@ -168,6 +182,14 @@ var onload = function (){
         var markrunSideData = markrunSidebar({
             content: document.querySelector("#markdown-body"),
             element: navContent
+        })
+        document.getElementById("nav-switch-type").remove()
+    } else {
+        var el = document.getElementById('page-nav')
+        el.innerHTML = ""
+        var markrunSideData = markrunSidebar({
+            element: el,
+            content: document.getElementById('markdown-body'),
         })
     }
     // ?blob ?embed
