@@ -191,6 +191,10 @@ var onload = function (){
             element: el,
             content: document.getElementById('markdown-body'),
         })
+        if (Object.keys(markrunSideData).length == 0) {
+            document.getElementById("nav-switch-type").remove()
+        }
+
     }
     // ?blob ?embed
     var links = document.querySelectorAll('a')
